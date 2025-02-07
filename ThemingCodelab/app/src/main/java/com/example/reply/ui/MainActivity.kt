@@ -71,11 +71,14 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ReplyAppPreviewLight() {
     AppTheme {
-        ReplyApp(
-            replyHomeUIState = ReplyHomeUIState(
-                emails = LocalEmailsDataProvider.allEmails
+        Surface(tonalElevation = 5.dp) {
+            ReplyApp(
+                replyHomeUIState = ReplyHomeUIState(
+                    emails = LocalEmailsDataProvider.allEmails
+                )
             )
-        )
+        }
     }
+}
 
 }
